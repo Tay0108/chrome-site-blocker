@@ -1,4 +1,4 @@
-const blockedSites = ["://www.onet.pl", "://www.wp.pl", "://www.sadeczanin.info"];
+const blockedSites = ["://www.onet.pl", "://www.wp.pl", "://www.sadeczanin.info", "://sadeczanin.info", "://linkedin.com", "://reddit.com"];
 
 function runPageThroughFilter(tab) {
 	blockedSites.forEach(function (site) {
@@ -8,11 +8,11 @@ function runPageThroughFilter(tab) {
 	});
 };
 
-function denyPage(tabId){
+function denyPage(tabId) {
 	chrome.tabs.remove(tabId);
 	// chrome.tabs.discard(tabId);
 };
 
 chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
-    runPageThroughFilter(tab);
+	runPageThroughFilter(tab);
 });

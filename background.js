@@ -1,4 +1,4 @@
-const blockedSites = ["://www.onet.pl", "://www.wp.pl", "://www.sadeczanin.info", "://sadeczanin.info", "://linkedin.com", "://reddit.com"];
+const blockedSites = ["://www.onet.pl", "://www.wp.pl", "://www.sadeczanin.info", "://sadeczanin.info", "://linkedin.com", "://www.linkedin.com", "://reddit.com", "://www.reddit.com"];
 
 function runPageThroughFilter(tab) {
 	blockedSites.forEach(function (site) {
